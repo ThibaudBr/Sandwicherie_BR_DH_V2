@@ -61,7 +61,7 @@ public class SandwichRepository
         _ingredients2.Add(Ingredient.Of("mayonnaise", 1,10));
         _ingredients2.Add(Ingredient.Of("salade", 10, 100));
 
-        _sandwiches.Add(Sandwich.Of("Diepois", _ingredients3, Price.Of(0.5)));
+        _sandwiches.Add(Sandwich.Of("Diepois", _ingredients3, Price.Of(4.5)));
     }
     
 }
