@@ -5,7 +5,6 @@ public class PrintOrder
 {
     public void PrintOrderToCLI(Order order)
     {
-        double totalPrice = 0;
         foreach (var orderSandwich in order.OrderSandwiches)
         {
             Console.WriteLine(orderSandwich.Key + " " + orderSandwich.Value.Name);
@@ -14,8 +13,8 @@ public class PrintOrder
                 Console.WriteLine("\t - " + ingredient.Name+ " , qut: " + ingredient.Amount + ", en g: " + ingredient.QuantityInGrammes);
             }
             Console.WriteLine("Prix du Sandwich : " + orderSandwich.Value.Price.Value);
-            totalPrice += orderSandwich.Value.Price.Value;
+            
         }
-        Console.WriteLine("Prix du Total de la commande : " + totalPrice);
+        Console.WriteLine("Prix du Total de la commande : " + order.OrderPrice.Value);
     }
 }
